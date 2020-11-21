@@ -20,28 +20,28 @@ public void draw()
   if(key == 100) {
     dIsPressed = true;
     rocket.turn(5);
-    rocket.accelerate(0.01);
+    rocket.accelerate();
     rocket.move();
   }
   if(key == 97) {
     aIsPressed = true;
     rocket.turn(-5);
-    rocket.accelerate(0.01);
+    rocket.accelerate();
     rocket.move();
   }
   if(key == 119) {
     wIsPressed = true;
-    rocket.accelerate(0.01);
+    rocket.accelerate();
     rocket.move();
   }
   keyReleased();
   rocket.show();
   if(wIsPressed == true && aIsPressed == true) {
-    rocket.accelerate(0.01);
+    rocket.accelerate();
     rocket.move();
     rocket.turn(-5);
   } else if (wIsPressed == true && dIsPressed == true) {
-    rocket.accelerate(0.01);
+    rocket.accelerate();
     rocket.move();
     rocket.turn(5);
   }
