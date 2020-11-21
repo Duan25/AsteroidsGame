@@ -21,33 +21,12 @@ class Spaceship extends Floater
    public void setYLocation(double myYteleport) {
      myCenterY = myYteleport;
    }
-   public void accelerate (double dAmount) {             
-    double dRadians = myPointDirection*(Math.PI/180);        
-    myXspeed += ((dAmount) * Math.cos(dRadians));    
-    myYspeed += ((dAmount) * Math.sin(dRadians));       
+   public void accelerate() {             
+    super.accelerate(0.01);
   } 
    public void move () {      
-    myCenterX += myXspeed;    
-    myCenterY += myYspeed;     
-  
-    if(myCenterX >width)
-    {     
-      myCenterX = 0;    
-    }    
-    else if (myCenterX<0)
-    {     
-      myCenterX = width;    
-    }    
-    if(myCenterY >height)
-    {    
-      myCenterY = 0;    
-    } 
-    
-    else if (myCenterY < 0)
-    {     
-      myCenterY = height;    
-    }   
-  }   
+    super.move();
+   }
    public void turn (double degreesOfRotation) {        
     myPointDirection += degreesOfRotation;   
   } 
