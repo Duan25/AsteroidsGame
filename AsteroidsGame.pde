@@ -17,21 +17,14 @@ public void draw()
   for(int i = 0; i < arr.length; i++) {
    arr[i].show();
   }
-  if(key == 100) {
-    dIsPressed = true;
-    rocket.turn(5);
-    rocket.accelerate();
-    rocket.move();
-  }
-  if(key == 97) {
-    aIsPressed = true;
-    rocket.turn(-5);
-    rocket.accelerate();
-    rocket.move();
-  }
   if(key == 119) {
     wIsPressed = true;
-    rocket.accelerate();
+    rocket.move();
+  } else if(key == 100) {
+    dIsPressed = true;
+    rocket.move(); 
+  } else if(key == 97) {
+    aIsPressed = true;
     rocket.move();
   }
   keyReleased();
@@ -39,11 +32,11 @@ public void draw()
   if(wIsPressed == true && aIsPressed == true) {
     rocket.accelerate();
     rocket.move();
-    rocket.turn(-5);
+    rocket.turn(-10);
   } else if (wIsPressed == true && dIsPressed == true) {
     rocket.accelerate();
     rocket.move();
-    rocket.turn(5);
+    rocket.turn(10);
   }
 } 
 
@@ -52,17 +45,25 @@ public void keyPressed() {
     rocket.setSpeed(0);
     rocket.setXLocation((int)(Math.random() * 401));
     rocket.setYLocation((int)(Math.random() * 401));
-  } 
+  } else if(key == 100) {
+    dIsPressed = true;
+    rocket.turn(10);
+  } else if(key == 97) {
+    aIsPressed = true;
+    rocket.turn(-10); 
+  } else if(key == 119) {
+    wIsPressed = true;
+    rocket.accelerate();
+    rocket.move();
+  }
 }
 
 public void keyReleased() {
   if(key == 100) {
    dIsPressed = false;
-  }
-  if(key == 97) {
+  } else if(key == 97) {
    aIsPressed = false;
-  }
-  if(key == 119) {
+  } else if(key == 119) {
    wIsPressed = false;
   }
 }
