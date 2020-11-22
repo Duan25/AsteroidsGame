@@ -22,7 +22,7 @@ class Spaceship extends Floater
      myCenterY = myYteleport;
    }
    public void accelerate() {             
-    super.accelerate(0.01);
+    super.accelerate(0.05);
   } 
    public void move () {      
     super.move();
