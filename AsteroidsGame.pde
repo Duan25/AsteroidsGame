@@ -1,8 +1,8 @@
 Star[] arr = new Star[200];
 Spaceship rocket = new Spaceship();
-boolean wIsPressed = false;
-boolean aIsPressed = false;
-boolean dIsPressed = false;
+private boolean wIsPressed = false;
+private boolean aIsPressed = false;
+private boolean dIsPressed = false;
 public void setup() 
 {
   size(400, 400);
