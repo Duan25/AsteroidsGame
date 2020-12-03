@@ -6,11 +6,8 @@ class Spaceship extends Floater
     yCorners = new int[] {-8, 0, 8, 0};
     myColor = color(255);
     myCenterX = myCenterY = 200;
-    myPointDirection = 90;
+    myPointDirection = (int)(Math.random() * 361);
     myXspeed = myYspeed = 0;
-   }
-   public void show() {
-    super.show();
    }
    public void setSpeed(int zero) {
      myXspeed = myYspeed = zero;
@@ -23,11 +20,5 @@ class Spaceship extends Floater
    }
    public void accelerate() {             
     super.accelerate(0.05);
-  } 
-   public void move () {      
-    super.move();
-   }
-   public void turn (double degreesOfRotation) {        
-    myPointDirection += degreesOfRotation;   
   } 
 }
