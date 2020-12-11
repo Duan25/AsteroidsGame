@@ -28,7 +28,7 @@ public void draw()
     stones.get(i).move();
     stones.get(i).accelerate();
     float d = dist((float)rocket.getCenterX(), (float)rocket.getCenterY(), (float)stones.get(i).getCenterX(), (float)stones.get(i).getCenterY());
-    if (d < 10) {
+    if (d < 20) {
       stones.remove(i);
     }
   }
