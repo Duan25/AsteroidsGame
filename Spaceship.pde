@@ -20,5 +20,11 @@ class Spaceship extends Floater
    }
    public void accelerate() {             
     super.accelerate(0.05);
-  } 
+  }
+   public double getCenterX() {
+    return myCenterX;
+  }
+   public double getCenterY() {
+    return myCenterY; 
+  }
 }
